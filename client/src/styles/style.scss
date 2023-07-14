@@ -1,0 +1,191 @@
+$themeColor: #d4d0c5;
+$radius: 8px;
+$lightBoarder: solid 0.5px grey;
+// #f1c753
+//
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  //   background-color: rgb(160, 255, 253);
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #f1c753;
+  //   overflow: hidden;
+  margin: 0px;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+.box {
+  //   margin-right: 800px;
+  margin: 150px;
+  flex: 1;
+  height: 700px;
+  background-color: rgb(255, 255, 255);
+  //   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+  gap: 10px;
+}
+
+.heroBox {
+  //   margin-right: 800px;
+  margin: 150px;
+  margin-right: -75px;
+  flex: 2;
+  height: 700px;
+  background-color: #000000;
+  //   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 10px;
+}
+
+.welcome {
+  flex: 6;
+}
+
+.yellowButton {
+  background-color: #f1c753;
+}
+
+#homeButtons {
+  flex: 1;
+  border-radius: $radius;
+  border: none;
+  &:hover {
+    outline: 2px solid rgb(183, 183, 183);
+  }
+}
+
+.incorrect {
+  min-height: 30px;
+  color: rgba(208, 0, 0, 0.792);
+}
+
+.input {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 0.5px grey;
+}
+
+.userInterface {
+  flex: 1;
+}
+
+// ******* MAP ******
+
+$mapRadius: 8px;
+.mapContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.userInterface {
+  flex: 0 0 auto;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: lighten(#f1c753, 15%);
+  gap: 30px;
+  padding: 15px;
+  border-right: solid 3px darken(#f1c753, 10%);
+}
+
+.mapStyles {
+  height: 100%;
+  flex-grow: 1;
+  //   margin-bottom: 100px;
+}
+
+.userInterfaceDisplay {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  height: 30px;
+}
+
+.searchBar {
+  //   border: solid 1px rgb(195, 1, 1);
+  background-color: rgb(255, 255, 255);
+  border-radius: $mapRadius;
+  padding: 10px;
+}
+.newMarker {
+  //   border: solid 1px rgb(195, 1, 1);
+  border-radius: $mapRadius;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.markerList {
+  background-color: rgb(248, 248, 248);
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 400px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  margin: -15px;
+}
+.marker {
+  flex: 0 0 auto;
+  background-color: white;
+  //   border: solid 0.5px grey;
+  height: 230px;
+  border-radius: $radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //   align-items: flex-start;
+  padding: 10px;
+  &:hover {
+    outline: $lightBoarder;
+  }
+}
+
+.markerButton {
+  height: 30px;
+  width: 70px;
+  border-radius: 8px;
+  border: $lightBoarder;
+  background-color: white;
+  &:hover {
+    outline: 1px solid rgb(62, 62, 62);
+  }
+}
+
+.title {
+  font-size: 18pt;
+  flex: 0;
+  margin: 0px;
+}
+.subject {
+  font-size: 12pt;
+  margin-top: 10px;
+  color: #aeaeae;
+}
